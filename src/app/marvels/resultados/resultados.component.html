@@ -1,0 +1,27 @@
+<!--<ul>
+    <li *ngFor="let marvel of resultados">
+       
+        
+        <img [src]="marvel.thumbnail.path +'.' +marvel.thumbnail.extension" alt=""> 
+    </li>
+</ul> -->
+
+
+
+<div class="row">
+    <div 
+    *ngFor="let marvel of resultados"
+    class="col-md-4 col-sm-6 animate__animated animate__fadeIn">
+        <div class="card">
+            <img [src]="marvel.thumbnail.path +'.' +marvel.thumbnail.extension" 
+                 [alt]="marvel.name"
+                 class="card-img-top">
+            <div class="card-body">
+                <p class="card-text">
+                    {{marvel.name}}
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
